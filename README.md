@@ -27,11 +27,11 @@ The main analysis and modeling pipeline consists of four scripts:
 - Probability of low proficiency
 
 ### Raw_data
-[EducationData.csv`](Raw_Data/EducationData.csv): Complete dataset spanning 2016-2018
+[EducationData.csv`](Raw Data/EducationData.csv): Complete dataset spanning 2016-2018
 
-[Excel_template.csv`](Raw_Data/Excel_template.csv):Template for single-row predictions
+[Excel_template.csv`](Raw Data/Excel_template.csv):Template for single-row predictions
 
-[Data_dictionary.csv`](Raw_Data/Data_dictionary.csv): Variable descriptions and possible value ranges
+[Data_dictionary.csv`](Raw Data/Data_dictionary.csv): Variable descriptions and possible value ranges
 
 ### Output
 **Final model ROC curve**
