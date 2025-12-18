@@ -36,6 +36,8 @@ The main analysis and modeling pipeline consists of four scripts:
 ### Output
 **Final model ROC curve**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Model Details
 Temporal Validation Framework:
 - Training: 2016-2017 data
@@ -48,6 +50,12 @@ Final Model:
 
 These enhancements improved the F1 score and better captured low-performing schools—the primary objective of this prediction pipeline.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Usage
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Results
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
