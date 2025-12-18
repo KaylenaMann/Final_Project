@@ -9,10 +9,10 @@ This repository provides an **early-warning prediction model** for Massachusetts
 - [Results](#results)
   
 ## Repository Structure
-### Code (/code)
+### Code (Final_project/code)
 The main analysis and modeling pipeline consists of four scripts:
 
-**Exploratory.ipynb:** Exploratory analysis evaluating multiple modeling approaches:
+[`Exploratory.ipynb`](code/Exploratory.ipynb): Exploratory analysis evaluating multiple modeling approaches:
 - Regular logistic regression
 - Ridge logistic regression
 - K-Nearest Neighbors (KNN)
