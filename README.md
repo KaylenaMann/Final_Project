@@ -12,12 +12,12 @@ This repository provides an **early-warning prediction model** for Massachusetts
 ### Code (Final_project/code)
 The main analysis and modeling pipeline consists of four scripts:
 
-[`Exploratory.ipynb`](code/Exploratory.ipynb): Exploratory analysis evaluating multiple modeling approaches:
+[`Exploratory.ipynb`](Code/Exploratory.ipynb): Exploratory analysis evaluating multiple modeling approaches:
 - Regular logistic regression
 - Ridge logistic regression
 - K-Nearest Neighbors (KNN)
 - Decision Tree
-**Clean_data.py:(( Data cleaning functions used in the pipeline
+[`Clean_data.py`](Code/Clean_data.py) Data cleaning functions used in the pipeline
 **Train&save.py:** Trains the final model and saves the fitted model along with preprocessing objects (imputer, scaler, etc.)
 **Predict.py:** Loads new data (e.g., single-row CSV) and generates predictions including:
 - Classification (low vs. high proficiency)
