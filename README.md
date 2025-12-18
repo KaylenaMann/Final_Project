@@ -66,19 +66,19 @@ These enhancements improved the F1 score and better captured low-performing scho
 
 ## Results
 
-In terms of prediciton, our final model performed well with new data. Final Accuracy was 0.83, with an ROC-AUC of 0.89, and an F1 Score: 0.71. The goal here was to detect at-risk schools despite class imbalance, so the F1 score provides the most realistic measure. Below is the classificaiton report, with higher recall than prediction for the bottom quartile, reflecting this goal of identifying more at risk schools even if it means some false positives. 
+In terms of prediciton, our final model performed well with new data. Final Accuracy was 0.83, with an ROC-AUC of 0.84, and an F1 Score: 0.71. The goal here was to detect at-risk schools despite class imbalance, so the F1 score provides the most realistic measure. Below is the classificaiton report, with higher recall than prediction for the bottom quartile, reflecting this goal of identifying more at risk schools even if it means some false positives. 
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| Not Bottom Quartile | 0.93 | 0.84 | 0.88 | 1,398 |
-| Bottom Quartile | 0.63 | 0.82 | 0.71 | 474 |
-| **Accuracy** | | | **0.83** | **1,872** |
-| Macro Avg | 0.78 | 0.83 | 0.80 | 1,872 |
-| Weighted Avg | 0.86 | 0.83 | 0.84 | 1,872 |
+| Not Bottom Quartile | 0.92 | 0.86 | 0.89 | 1,398 |
+| Bottom Quartile | 0.66 | 0.77 | 0.71 | 474 |
+| **Accuracy** | | | **0.84** | **1,872** |
+| Macro Avg | 0.79 | 0.82 | 0.80 | 1,872 |
+| Weighted Avg | 0.85 | 0.84 | 0.84 | 1,872 |
 
 
 Additionally, there were 193 schools incorrectly flagged as low-performance, with an average predicted probability of 0.74. When evaluating the means, they had very similar results overall to the correctly flagged schools. These may serve as potential case studies to investigate protective factors.
 
-The strongest predictors of academic performance were poverty status, enrollment status, and charter status. With higher poverty schools predicting low proficiency, and lower enrollment numbers predicting low proficiency. Non-charter schools were more likely to not be proficient, compared to charter. Basically, the schools more at risk are those with a higher proportion of students facing economic issues, those with lower enrollment, and non-charter schools. 
+The strongest predictors of academic performance were poverty status, direct certification and enrollment. With higher poverty schools predicting low proficiency, and lower enrollment numbers predicting low proficiency serving as a protective factor. 
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
