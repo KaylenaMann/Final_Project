@@ -7,7 +7,15 @@ This repository provides an **early-warning prediction model** for Massachusetts
 - [Model Details](#model-details)
 - [Usage](#usage)
 - [Results](#results)
-  
+
+
+## About The Project
+
+This project serves as an early-warning system, identifying at-risk schools based on yearly tracked data. The data included as features are reapeated yearly, without limitations, making it applicable to potential policymakers to  identify at-risk schools a full year in advance, before new tests are released. 
+
+Identification of at-risk schools could help guide resource allocation and further investigation, while schools that are overperforming relative to predictions (e.g., predicted to have low proficiency but actually have high proficiency) can be examined more closely to understand what practices aid in their success. 
+
+
 ## Repository Structure
 ### Code (Final_project/code)
 The main analysis and modeling pipeline consists of four scripts:
@@ -57,5 +65,23 @@ These enhancements improved the F1 score and better captured low-performing scho
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
 ## Results
+
+In terms of prediciton, our final model performed well with new data. Final Accuracy was 0.83, with an ROC-AUC of 0.89, and an F1 Score: 0.71. The goal here was to detect at-risk schools despite class imbalance, so the F1 score provides the most realistic measure. Below is the classificaiton report, with higher recall than prediction for the bottom quartile, reflecting this goal of identifying more at risk schools even if it means some false positives. 
+
+
+Classification Report (2018):
+                     precision    recall  f1-score   support
+
+Not Bottom Quartile       0.93      0.84      0.88      1398
+    Bottom Quartile       0.63      0.82      0.71       474
+
+           accuracy                           0.83      1872
+          macro avg       0.78      0.83      0.80      1872
+       weighted avg       0.86      0.83      0.84      1872
+
+
+Additionally, there were 193 schools incorrectly flagged as low-performance, with an average predicted probability of 0.74. When evaluating the means, they had very similar results overall to the correctly flagged schools. These may serve as potential case studies to investigate protective factors.
+
+The strongest predictors of academic performance were poverty status, enrollment status, and charter status. With higher poverty schools predicting low proficiency, and lower enrollment numbers predicting low proficiency. Non-charter schools were more likely to not be proficient, compared to charter. Basically, the schools more at risk are those with a higher proportion of students facing economic issues, those with lower enrollment, and non-charter schools. 
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
