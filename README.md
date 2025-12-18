@@ -36,7 +36,7 @@ The main analysis and modeling pipeline consists of four scripts:
 ### Output
 **Final model ROC curve**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
 ## Model Details
 Temporal Validation Framework:
