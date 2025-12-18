@@ -1,6 +1,13 @@
 # Massachusetts Schools Early Warning System
 This repository provides an **early-warning prediction model** for Massachusetts schools, identifying schools at risk of having 25% or fewer students achieving proficient math scores.
 
+## Table of Contents
+- [About The Project](#about-the-project)
+- [Repository Structure](#repository-structure)
+- [Model Details](#model-details)
+- [Usage](#usage)
+- [Results](#results)
+  
 ## Repository Structure
 ### Code (/code)
 The main analysis and modeling pipeline consists of four scripts:
