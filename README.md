@@ -50,12 +50,12 @@ Final Model:
 
 These enhancements improved the F1 score and better captured low-performing schools—the primary objective of this prediction pipeline.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
 ## Usage
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
 ## Results
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
