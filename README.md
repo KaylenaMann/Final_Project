@@ -68,16 +68,13 @@ These enhancements improved the F1 score and better captured low-performing scho
 
 In terms of prediciton, our final model performed well with new data. Final Accuracy was 0.83, with an ROC-AUC of 0.89, and an F1 Score: 0.71. The goal here was to detect at-risk schools despite class imbalance, so the F1 score provides the most realistic measure. Below is the classificaiton report, with higher recall than prediction for the bottom quartile, reflecting this goal of identifying more at risk schools even if it means some false positives. 
 
-
-Classification Report (2018):
-                     precision    recall  f1-score   support
-
-Not Bottom Quartile       0.93      0.84      0.88      1398
-    Bottom Quartile       0.63      0.82      0.71       474
-
-           accuracy                           0.83      1872
-          macro avg       0.78      0.83      0.80      1872
-       weighted avg       0.86      0.83      0.84      1872
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Not Bottom Quartile | 0.93 | 0.84 | 0.88 | 1,398 |
+| Bottom Quartile | 0.63 | 0.82 | 0.71 | 474 |
+| **Accuracy** | | | **0.83** | **1,872** |
+| Macro Avg | 0.78 | 0.83 | 0.80 | 1,872 |
+| Weighted Avg | 0.86 | 0.83 | 0.84 | 1,872 |
 
 
 Additionally, there were 193 schools incorrectly flagged as low-performance, with an average predicted probability of 0.74. When evaluating the means, they had very similar results overall to the correctly flagged schools. These may serve as potential case studies to investigate protective factors.
