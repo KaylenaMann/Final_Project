@@ -6,23 +6,27 @@
 
 import pandas as pd
 import joblib
+from pathlib import Path
 from Clean_data import clean_data
 
 
 # In[12]:
 
 
-new_data = pd.read_csv("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Raw Data/Excel_template.csv")
+script_dir = Path(__file__).parent
+model_dir = script_dir / "model"
+data_dir = script_dir.parent / "Raw Data"
 
+new_data = pd.read_csv(data_dir / "Excel_template.csv")
 
 # In[13]:
 
 
-model = joblib.load("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Code/model/final_model.pkl")
-scaler = joblib.load("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Code/model/scaler.pkl")
-training_columns = joblib.load("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Code/model/training_columns.pkl")
-cutoff = joblib.load("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Code/model/cutoff.pkl")
-continuous_features = joblib.load("/Users/kaylenamann/Downloads/BC Grad/2025Fall_ADAN7430/Final/Code/model/continuous_features.pkl")
+model = joblib.load(model_dir / "final_model.pkl")
+scaler = joblib.load(model_dir / "scaler.pkl")
+training_columns = joblib.load(model_dir / "training_columns.pkl")
+cutoff = joblib.load(model_dir / "cutoff.pkl")
+continuous_features = joblib.load(model_dir / "continuous_features.pkl")
 
 print(f"Loaded {len(new_data)} school(s) for prediction")
 print(f"Cutoff threshold: {cutoff:.4f}")
