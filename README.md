@@ -11,13 +11,13 @@ This repository provides an **early-warning prediction model** for Massachusetts
 
 ## About The Project
 
-This project serves as an early-warning system, identifying at-risk schools based on yearly tracked data. The data included as features are reapeated yearly, without limitations, making it applicable for potential policymakers to identify at-risk schools a full year in advance, before new tests are released. 
+This project serves as an early-warning system, identifying at-risk schools based on yearly tracked data. The data included as features are repeated yearly, without limitations, making it applicable for potential policymakers to identify at-risk schools a full year in advance, before new tests are released. Or even for individual schools to see their relative risk level. 
 
 Identification of at-risk schools could help guide resource allocation and further investigation, while schools that are overperforming relative to predictions (e.g., predicted to have low proficiency but actually have high proficiency) can be examined more closely to understand what practices aid in their success. 
 
 
 ## Repository Structure
-### Code (Final_project/code)
+### Code (Final_project/Code)
 The main analysis and modeling pipeline consists of four scripts:
 
 [`Exploratory.ipynb`](Code/Exploratory.ipynb): Exploratory analysis evaluating multiple modeling approaches:
@@ -34,14 +34,15 @@ The main analysis and modeling pipeline consists of four scripts:
 - Classification (low vs. high proficiency)
 - Probability of low proficiency
 
-### Raw_data
+### Raw_data (Final_project/Raw Data)
 [EducationData.csv`](<Raw Data/EducationData.csv>): Complete dataset spanning 2016-2018
 
 [Excel_template.csv`](<Raw Data/Excel_template.csv>): Template for single-row predictions
 
 [Data_dictionary.csv`](<Raw Data/Data_dictionary.csv>): Variable descriptions and possible value ranges
 
-### Output
+### Output (Final_project/Output)
+
 **Final model ROC curve**
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
@@ -70,7 +71,7 @@ The goals were to optimize the F1 score and capture as many low-performing schoo
 ## Usage
 
 ### 1. Download the repository
-Clone or download this repository from GitHub and ensure the directory structure is preserved. Alternatively, download the ZIP file from GitHub and unzip it locally.
+Clone or download this repository from GitHub and ensure the directory structure is retained. Alternatively, download the ZIP file from GitHub and unzip it locally.
 
 ```bash
 git clone https://github.com/KaylenaMann/Final_Project.git
@@ -78,7 +79,7 @@ git clone https://github.com/KaylenaMann/Final_Project.git
 ### 2. Install dependencies
 
 This project requires Python 3.9 or later.
-Install all required packages using
+After cloning and confirming the correct directory, install all required packages using
 ```bash
 pip install -r requirements.txt
 ```
