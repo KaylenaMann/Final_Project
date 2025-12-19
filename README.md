@@ -8,13 +8,11 @@ This repository provides an **early-warning prediction model** for Massachusetts
 - [Usage](#usage)
 - [Results](#results)
 
-
 ## About The Project
 
 This project serves as an early-warning system, identifying at-risk schools based on yearly tracked data. The data included as features are repeated yearly, without limitations, making it applicable for potential policymakers to identify at-risk schools a full year in advance, before new tests are released. Or even for individual schools to see their relative risk level. 
 
 Identification of at-risk schools could help guide resource allocation and further investigation, while schools that are overperforming relative to predictions (e.g., predicted to have low proficiency but actually have high proficiency) can be examined more closely to understand what practices aid in their success. 
-
 
 ## Repository Structure
 ### Code (Final_project/Code)
@@ -56,9 +54,18 @@ Final Model:
 - Ridge logistic regression best performed on unseen data, most likely due to multicollinearity in some poverty predictors.
 - Tested multiple interactions and polynomial terms, and they all resulted in worse fit, indicating a simple model is best.
 
-Features include enrollment, charter status, school level (elementary, middle, high), school type (regular, specialized), Title I status, percent of poverty, and direct certification.  
+The final model includes the following features:
 
-Key features of the modeling approach:
+- Enrollment (0–4,360)
+- Charter status (Yes / No)
+- School level (Elementary, Middle, High, Other)
+- School type (Regular vs. Specialized)
+- Title I status (Eligible / Not eligible)
+- Percent poverty (0–40%)
+- Percent moderate poverty (0–40%)
+- Direct certification count (0–2,036)
+
+Key components of the modeling approach:
 - Cross-validation for hyperparameter selection
 - Class imbalance handled via class weighting
 - Standardization of continuous predictors
