@@ -57,13 +57,56 @@ Final Model:
 
 Features include enrollment, charter status, school level (elementary, middle, high), school type (regular, specialized), Title I status, percent of poverty, and direct certification.  
 
+Key features of the modeling approach:
+- Cross-validation for hyperparameter selection
+- Class imbalance handled via class weighting
+- Standardization of continuous predictors
+- Evaluation using accuracy, ROC-AUC, and F1 score
+
 The goals were to optimize the F1 score and capture as many low-performing schools as possible.
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
 ## Usage
 
+### 1. Download the repository
+Clone or download this repository from GitHub and ensure the directory structure is preserved. Alternatively, download the ZIP file from GitHub and unzip it locally.
 
+```bash
+git clone <repository-url>
+```
+### 2. Install dependencies
+
+This project requires Python 3.9 or later.
+Install all required packages using
+```bash
+pip install -r requirements.txt
+```
+### 3. Train the model
+To train the model and save all fitted objects (model, scaler, feature list, and cutoff), run
+
+```bash
+python TrainSave.py
+```
+This script:
+- cleans and preprocesses the data
+- splits data into training (2016–2017) and test (2018) sets
+- fits a cross-validated logistic regression model
+- saves trained objects to the model/ directory
+
+### 4. Make a prediction using the Excel template
+- Open Excel_template.csv
+- Enter values for a single school using the same variable definitions and units as the training data
+- Save the file
+- Run the following:
+```bash
+python Predict.py
+```
+This script will:
+- load the trained model and preprocessing objects
+- apply the same data cleaning and feature engineering steps used during training
+- output a predicted classification (bottom quartile vs. not bottom quartile)
+- display the predicted probability of bottom-quartile performance
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
