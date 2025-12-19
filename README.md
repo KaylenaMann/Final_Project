@@ -26,7 +26,7 @@ The main analysis and modeling pipeline consists of four scripts:
   
 [`Clean_data.py`](Code/Clean_data.py): Data cleaning functions used in the pipeline
 
-[`Train&save.py`](Code/Train&save.py): Trains the final model and saves the fitted model along with preprocessing objects (imputer, scaler, etc.)
+[`TrainSave.py`](Code/TrainSave.py): Trains the final model and saves the fitted model along with preprocessing objects (imputer, scaler, etc.)
 
 [`Predict.py`](Code/Predict.py): Loads new data (e.g., single-row CSV) and generates predictions, including:
 - Classification (low vs. high proficiency)
