@@ -53,7 +53,6 @@ except Exception as e:
     print("  - charter")
     print("  - title_i_status")
     print("  - enrollment")
-    print("  - magnet")
     print("  - direct_certification")
     print("  - meps_poverty_pct")
     print("  - meps_mod_poverty_pct")
@@ -63,6 +62,12 @@ except Exception as e:
 print(f"Continuous features to scale: {len(continuous_features)}")
 print(f"Categorical features (not scaled): {len(training_columns) - len(continuous_features)}")
 
+if X_new[continuous_features].isna().any().any():
+    raise ValueError(
+        "Missing values detected in continuous predictors. "
+        "Please fill all numeric fields in the Excel template."
+    )
+    
 X_new_scaled = X_new.copy()
 X_new_scaled[continuous_features] = scaler.transform(X_new[continuous_features])
 
