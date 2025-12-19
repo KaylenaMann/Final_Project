@@ -1,0 +1,10 @@
+variable,description,Possible Values,source
+school_level,"School level as Primary, Prekindergarten, Ungraded,  Elementary, Middle,  Secondary, High, or Other","Primary, Prekindergarten, Ungraded,  Elementary, Middle,  Secondary, High, or Other",Common Core of Data
+school_type,"School type as Regular school, Special education school,  Vocational school, or Other/alternative school","Regular school, Special education school,  Vocational school, or Other/alternative school",Common Core of Data
+charter,Yes or No for Charter status,Yes or No,Common Core of Data
+math_test_pct_prof_midpt,Share of students scoring proficient on a mathematics assessment,0-100,EDFacts
+enrollment,Student enrollment as a count,0-4360,Common Core of Data
+direct_certification,Number of students eligible for free lunch as a count,0-2036,Common Core of Data
+meps_poverty_pct,A statistical estimate of the percentage of a school's students living in poverty. This estimate is the preferred statistic for national-level analyses.,0-40,Model Estimates of Poverty in Schools (MEPS)
+meps_mod_poverty_pct,"The statistical estimate of the percentage of a school's students living in poverty, modified to align with a measure of the school district's poverty. This estimate is the preferred statistic for analysis of large school districts across time or across states.",0-40,Model Estimates of Poverty in Schools (MEPS)
+title_i_status,Title I eligibility status ,School is eligible for Title I Schoolwide program (SWP) and provides Title I Schoolwide program or School is not eligible for either Title I Targeted Assistance or Schoolwide program,Common Core of Data
