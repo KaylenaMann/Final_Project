@@ -62,7 +62,7 @@ except Exception as e:
 
 print(f"Continuous features to scale: {len(continuous_features)}")
 print(f"Categorical features (not scaled): {len(training_columns) - len(continuous_features)}")
-
+continuous_features = [c for c in continuous_features if c in X_new.columns]
 X_new_scaled = X_new.copy()
 X_new_scaled[continuous_features] = scaler.transform(X_new[continuous_features])
 
