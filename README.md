@@ -73,7 +73,7 @@ The goals were to optimize the F1 score and capture as many low-performing schoo
 Clone or download this repository from GitHub and ensure the directory structure is preserved. Alternatively, download the ZIP file from GitHub and unzip it locally.
 
 ```bash
-git clone <repository-url>
+git clone <[https://github.com/KaylenaMann/Final_Project]>
 ```
 ### 2. Install dependencies
 
