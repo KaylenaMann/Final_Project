@@ -39,6 +39,11 @@ The main analysis and modeling pipeline consists of four scripts:
 
 [Data_dictionary.csv`](<Raw Data/Data_dictionary.csv>): Variable descriptions and possible value ranges
 
+### Raw_data (Final_project/Processed Data)
+[cleaned_test_data.csv`](<Raw Data/cleaned_test_data.csv>): Cleaned test dataset
+
+[cleaned_train_data.csv`](<Raw Data/cleaned_train_data.csv>): Cleaned train dataset
+
 ### Output (Final_project/Output)
 
 correlation_heatmap.png
