@@ -73,6 +73,7 @@ def clean_data(df, cutoff=None, training_columns=None, is_training=True, verbose
         "school_level_clean",
         "school_type_clean",  
         "charter",
+        "magnet",
         "title_i_binary"
     ]
 
