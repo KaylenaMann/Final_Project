@@ -86,7 +86,7 @@ pip install -r requirements.txt
 To train the model and save all fitted objects (model, scaler, feature list, and cutoff), run
 
 ```bash
-python TrainSave.py
+python Code/TrainSave.py
 ```
 This script:
 - cleans and preprocesses the data
@@ -95,12 +95,12 @@ This script:
 - saves trained objects to the model/ directory
 
 ### 4. Make a prediction using the Excel template
-- Open Excel_template.csv
+- Open Raw Data/Excel_template.csv
 - Enter values for a single school using the same variable definitions and units as the training data
 - Save the file
 - Run the following:
 ```bash
-python Predict.py
+python Code/Predict.py
 ```
 This script will:
 - load the trained model and preprocessing objects
