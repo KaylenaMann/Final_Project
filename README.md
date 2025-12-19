@@ -1,5 +1,5 @@
 # Massachusetts Schools Early Warning System
-This repository provides an **early-warning prediction model** for Massachusetts schools, identifying schools at risk of having 25% or fewer students achieving proficient math scores.
+This repository provides an **early-warning prediction model** for Massachusetts schools, identifying schools at risk of falling into the bottom quartile of math proficiency.
 
 ## Table of Contents
 - [About The Project](#about-the-project)
@@ -73,7 +73,7 @@ The goals were to optimize the F1 score and capture as many low-performing schoo
 Clone or download this repository from GitHub and ensure the directory structure is preserved. Alternatively, download the ZIP file from GitHub and unzip it locally.
 
 ```bash
-git clone <[https://github.com/KaylenaMann/Final_Project]>
+git clone https://github.com/KaylenaMann/Final_Project.git
 ```
 ### 2. Install dependencies
 
