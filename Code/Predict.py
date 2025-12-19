@@ -12,7 +12,7 @@ from Clean_data import clean_data
 
 # In[12]:
 
-
+#making sure anyone can run this script
 script_dir = Path(__file__).parent
 model_dir = script_dir / "model"
 data_dir = script_dir.parent / "Raw Data"
@@ -21,7 +21,7 @@ new_data = pd.read_csv(data_dir / "Excel_template.csv")
 
 # In[13]:
 
-
+#loading in Model
 model = joblib.load(model_dir / "final_model.pkl")
 scaler = joblib.load(model_dir / "scaler.pkl")
 training_columns = joblib.load(model_dir / "training_columns.pkl")
@@ -37,6 +37,7 @@ print(new_data.T)
 # In[14]:
 
 
+#cleaning data
 try:
     X_new = clean_data(
         new_data,
@@ -62,12 +63,6 @@ except Exception as e:
 print(f"Continuous features to scale: {len(continuous_features)}")
 print(f"Categorical features (not scaled): {len(training_columns) - len(continuous_features)}")
 
-if X_new[continuous_features].isna().any().any():
-    raise ValueError(
-        "Missing values detected in continuous predictors. "
-        "Please fill all numeric fields in the Excel template."
-    )
-    
 X_new_scaled = X_new.copy()
 X_new_scaled[continuous_features] = scaler.transform(X_new[continuous_features])
 
@@ -76,6 +71,7 @@ print(f"  enrollment: {X_new_scaled['enrollment'].values[0]:.2f}")
 print(f"  meps_poverty_pct: {X_new_scaled['meps_poverty_pct'].values[0]:.2f}")
 print(f"  direct_certification: {X_new_scaled['direct_certification'].values[0]:.2f}")
 
+#Making Predictions
 pred_class = model.predict(X_new_scaled)[0]
 pred_prob = model.predict_proba(X_new_scaled)[0, 1]
 
