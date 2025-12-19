@@ -41,7 +41,10 @@ The main analysis and modeling pipeline consists of four scripts:
 
 ### Output (Final_project/Output)
 
-**Final model ROC curve**
+correlation_heatmap.png
+model_comparison_metrics.csv
+ridge_coefficients.csv
+ridge_model_diagnostics.png
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
 
@@ -133,5 +136,7 @@ In terms of prediction, our final model performed well with new data. Final Accu
 Additionally, there were 206 schools incorrectly flagged as low-performance, with an average predicted probability of 0.75. When evaluating the means, they had very similar results overall to the correctly flagged schools. These may serve as potential case studies to investigate protective factors.
 
 The strongest predictors of academic performance were poverty status and school level. 
+
+<img width="833" height="292" alt="Screenshot 2025-12-19 at 2 55 33 PM" src="https://github.com/user-attachments/assets/ab7b5686-8329-45a3-89f8-3f9eb0d08f39" />
 
 <p align="right">(<a href="#Table-of-Contents">back to top</a>)</p>
