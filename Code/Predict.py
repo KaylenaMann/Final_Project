@@ -53,7 +53,6 @@ except Exception as e:
     print("  - charter")
     print("  - title_i_status")
     print("  - enrollment")
-    print("  - magnet")
     print("  - direct_certification")
     print("  - meps_poverty_pct")
     print("  - meps_mod_poverty_pct")

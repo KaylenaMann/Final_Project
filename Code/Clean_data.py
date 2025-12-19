@@ -12,7 +12,7 @@ def clean_data(df, cutoff=None, training_columns=None, is_training=True, verbose
     df = df.copy()
     
     df["title_i_binary"] = df["title_i_status"].apply(
-        lambda x: 1 if "eligible" in str(x).lower() else 0
+        lambda x: 1 if "eligible" in str(x).lower() and "ineligible" not in str(x).lower() else 0
     )
     
     df["school_level"] = (
@@ -59,10 +59,12 @@ def clean_data(df, cutoff=None, training_columns=None, is_training=True, verbose
         df["math_test_pct_prof_midpt"] = pd.to_numeric(
             df["math_test_pct_prof_midpt"], errors="coerce"
         )
+        df = df.dropna(subset=["math_test_pct_prof_midpt"]) 
+    
         if cutoff is None:
-            cutoff = df["math_test_pct_prof_midpt"].dropna().quantile(0.25)
+            cutoff = df["math_test_pct_prof_midpt"].quantile(0.25)
+    
         df["y"] = (df["math_test_pct_prof_midpt"] <= cutoff).astype(int)
-        df = df.dropna(subset=["y"])
 
     predictors = [
         "enrollment",

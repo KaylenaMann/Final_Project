@@ -9,7 +9,6 @@ import joblib
 from sklearn.linear_model import LogisticRegressionCV
 from Clean_data import clean_data
 from pathlib import Path
-from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, roc_auc_score, f1_score, classification_report
 
@@ -55,10 +54,9 @@ X_test_raw = clean_data(
 test_data["math_test_pct_prof_midpt"] = pd.to_numeric(
     test_data["math_test_pct_prof_midpt"], errors="coerce"
 )
-y_test = (test_data["math_test_pct_prof_midpt"] <= cutoff).astype(int)
-valid_idx = y_test.notna()
-y_test = y_test[valid_idx]
-X_test = X_test_raw[valid_idx]
+valid_idx = test_data["math_test_pct_prof_midpt"].notna()
+y_test = (test_data.loc[valid_idx, "math_test_pct_prof_midpt"] <= cutoff).astype(int)
+X_test = X_test_raw.loc[valid_idx]
 
 print(f"\nTraining samples: {len(X_train)}")
 print(f"Test samples: {len(X_test)}")
